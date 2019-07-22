@@ -1,0 +1,3 @@
+administer google_top_headlines:
+  title: 'Administer Google Top Headlines'
+  description: 'Allow access to configure the module settings.'

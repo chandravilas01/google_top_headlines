@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * @file
+ * google_top_headlines.module.
+ *
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Cache\Cache;
+
+/**
+ * Implements hook_help().
+ */
+function google_top_headlines_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help.
+    case 'help.page.google_top_headlines':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The  module google_top_headlines provide settings for block to get latest top heading/ news.') . '</p>';
+      $output .= '<h3>' . t('Uses') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('Configuring the module') . '</dt>';
+      $output .= '<dd>' . t("To configure the module visit the <a href=':config-page'>Google Top Heading</a> page, <em>check</em> which feature you'd like to enable and save the configuration. For this you need the <em>Google Top Headlines</em> permission.", [':config-page' => Url::fromRoute('google_top_headlines.admin_settings_form')->toString()]) . '</dd>';
+      $output .= '</dl>';
+
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function google_top_headlines_theme() {
+  return [
+   'google_top_headlines' => [
+     'variables' => [
+       'author0' => NULL,
+       'title0' => NULL,
+       'description0' => NULL,
+       'link0' => NULL,
+       'imgsrc0' => NULL,
+       'date0' => NULL,
+       'content0' => NULL,
+
+       'author1' => NULL,
+       'title1' => NULL,
+       'description1' => NULL,
+       'link1' => NULL,
+       'imgsrc1' => NULL,
+       'date1' => NULL,
+       'content1' => NULL,
+
+       'author2' => NULL,
+       'title2' => NULL,
+       'description2' => NULL,
+       'link2' => NULL,
+       'imgsrc2' => NULL,
+       'date2' => NULL,
+       'content2' => NULL,
+
+       'author3' => NULL,
+       'title3' => NULL,
+       'description3' => NULL,
+       'link3' => NULL,
+       'imgsrc3' => NULL,
+       'date3' => NULL,
+       'content3' => NULL,
+
+       'author4' => NULL,
+       'title4' => NULL,
+       'description4' => NULL,
+       'link4' => NULL,
+       'imgsrc4' => NULL,
+       'date4' => NULL,
+       'content4' => NULL,
+
+       'author5' => NULL,
+       'title5' => NULL,
+       'description5' => NULL,
+       'link5' => NULL,
+       'imgsrc5' => NULL,
+       'date5' => NULL,
+       'content5' => NULL,
+
+       'author6' => NULL,
+       'title6' => NULL,
+       'description6' => NULL,
+       'link6' => NULL,
+       'imgsrc6' => NULL,
+       'date6' => NULL,
+       'content6' => NULL,
+
+       'author7' => NULL,
+       'title7' => NULL,
+       'description7' => NULL,
+       'link7' => NULL,
+       'imgsrc7' => NULL,
+       'date7' => NULL,
+       'content7' => NULL,
+
+       'author8' => NULL,
+       'title8' => NULL,
+       'description8' => NULL,
+       'link8' => NULL,
+       'imgsrc8' => NULL,
+       'date8' => NULL,
+       'content8' => NULL,
+
+       'author9' => NULL,
+       'title9' => NULL,
+       'description9' => NULL,
+       'link9' => NULL,
+       'imgsrc9' => NULL,
+       'date9' => NULL,
+       'content9' => NULL
+     ],
+     'template' => 'google-top-headlines',
+    ]
+  ];  
+}
